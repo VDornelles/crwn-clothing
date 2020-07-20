@@ -3,8 +3,11 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { auth } from '../../Firebase/firebase.utils';
 
-import './header.style.scss';
 import { ReactComponent as CrwnLogo } from '../../assets/crown.svg';
+import CartIcon from '../cart-icon/cart-icon.component';
+import CartDropdown from '../cart-dropdown/cart-dropdown.component';
+
+import './header.style.scss';
 
 const Header = ({ currentUser }) => (
   <div className="header">
@@ -28,7 +31,9 @@ const Header = ({ currentUser }) => (
           SIGN IN
         </Link>
       )}
+      <CartIcon />
     </div>
+    <CartDropdown />
   </div>
 );
 
