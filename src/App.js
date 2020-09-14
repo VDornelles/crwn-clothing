@@ -1,13 +1,12 @@
 import React from 'react';
 
 import { Route, Switch, Redirect } from 'react-router-dom';
-import { auth, createUserProfileDocument } from './Firebase/firebase.utils';
+import { auth, createUserProfileDocument, addCollectionsAndDocuments } from './Firebase/firebase.utils';
 import {createStructuredSelector} from 'reselect';
 
 import {connect} from 'react-redux';
 import {setCurrentUser} from './redux/user/user.actions';
 import {selectCurrentUser} from './redux/user/user.selectors';
-
 
 import Header from './components/header/header.component';
 import SignPage from './pages/signPage/sign.component';
@@ -39,7 +38,11 @@ class App extends React.Component {
       } else {
         setCurrentUser(userAuth);
       }
+
+
+
     });
+
   }
 
   componentWillUnmount() {
@@ -63,7 +66,7 @@ class App extends React.Component {
 }
 
 const mapStateToProps = createStructuredSelector({
-  currentUser: selectCurrentUser
+  currentUser: selectCurrentUser,
 })
 
 const mapDispatchToProps = dispatch => ({

@@ -17,7 +17,8 @@
     "redux": "^4.0.5",
     "redux-logger": "^3.0.6",
     "redux-persist": "^6.0.0",
-    "reselect": "^4.0.0"
+    "reselect": "^4.0.0",
+    "styled-components": "^5.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -51,5 +52,9 @@
     "eslint-plugin-react": "^7.20.3",
     "eslint-plugin-react-hooks": "^4.0.8",
     "prettier": "^2.0.5"
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/VDornelles/crwn-clothing.git",
+  "author": "Vinicius Dornelles de Sousa <vinicius_sousa@hst.com.br>",
+  "license": "MIT"
 }
